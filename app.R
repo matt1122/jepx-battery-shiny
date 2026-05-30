@@ -375,9 +375,9 @@ ui <- page_sidebar(
       "Load forecast data",
       class = "btn-primary"
     ),
-
-    hr(),
-
+    
+    tags$div(style = "height: 10px;"),
+    
     uiOutput("area_ui"),
     uiOutput("date_ui"),
 
@@ -599,9 +599,9 @@ server <- function(input, output, session) {
       geom_step(
         aes(y = soc_scaled),
         linewidth = 1.0,
-        alpha = 0.75,
+        alpha = 0.80,
         linetype = "dashed",
-        color = "#F48FB1"
+        color = "#F06292"
       ) +
       geom_point(
         data = charge_points,
