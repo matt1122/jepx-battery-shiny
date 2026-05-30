@@ -613,10 +613,10 @@ server <- function(input, output, session) {
       geom_line(aes(y = sell_price), linewidth = 0.5, linetype = "dashed") +
       geom_step(
         aes(y = soc_scaled),
-        linewidth = 1.25,
-        alpha = 0.9,
-        linetype = "solid",
-        color = "#D81B60"
+        linewidth = 1.0,
+        alpha = 0.75,
+        linetype = "dashed",
+        color = "#F48FB1"
       ) +
       geom_point(
         data = charge_points,
@@ -642,11 +642,10 @@ server <- function(input, output, session) {
         ),
         x = "Time",
         y = "Price",
-        caption = "Solid line: point forecast. Dashed lines/ribbon: conservative buy/sell inputs. Blue: charge. Red: discharge. Pink line: SoC scaled to price axis."
-      ) +
-      theme_minimal(base_size = 13) +
-      theme(
-        plot.title = element_text(face = "bold")
+        caption = paste0(
+          "Solid line: point forecast. Dashed lines/ribbon: conservative buy/sell inputs.\n",
+          "Blue: charge. Red: discharge. Light pink dashed line: SoC scaled to price axis."
+        )
       )
   })
 
