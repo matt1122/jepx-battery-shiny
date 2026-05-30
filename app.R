@@ -378,8 +378,6 @@ ui <- page_sidebar(
 
     hr(),
 
-    textOutput("updated_at"),
-
     uiOutput("area_ui"),
     uiOutput("date_ui"),
 
@@ -468,19 +466,6 @@ server <- function(input, output, session) {
       load_error(conditionMessage(e))
       showNotification(conditionMessage(e), type = "error", duration = 8)
     })
-  })
-
-  output$updated_at <- renderText({
-    if (!is.null(load_error())) {
-      return(paste("Error:", load_error()))
-    }
-
-    x <- forecast()
-    if (is.null(x)) {
-      return("Data not loaded.")
-    }
-
-    paste("updated_at:", x$updated_at)
   })
 
   output$area_ui <- renderUI({
