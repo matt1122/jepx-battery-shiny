@@ -19,8 +19,7 @@ API_BASE_URL <- "http://167.172.64.188:9000/JEPX_forecast"
 # Replace this with the actual Google Sheet ID.
 # Example:
 # https://docs.google.com/spreadsheets/d/XXXXXXXX/edit
-# -> XXXXXX is the sheet ID.
-PERCENTILE_SHEET_ID <- "1-qiaLnJ-7rH9***"
+PERCENTILE_SHEET_ID <- "1FVrJj-K-RXJonvvDJy6hDwK71XzpjYbOTZBPOtLi3RE"
 PERCENTILE_SHEET_NAME <- "percentile"
 
 # ------------------------------------------------------------
