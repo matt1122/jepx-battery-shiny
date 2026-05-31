@@ -627,7 +627,7 @@ server <- function(input, output, session) {
       labs(
         title = "Optimal charge/discharge timing with guard bands",
         subtitle = paste0(
-          "updated_at: ", forecast()$updated_at,
+          "forecasted_at: ", forecast()$updated_at,
           " | strategy: ", ifelse(input$strategy == "base", "Base", paste0("P", input$strategy)),
           " | efficiency: ", input$efficiency,
           " | profit: ", round(opt$total_profit, 2)
