@@ -14,7 +14,7 @@ library(bslib)
 # Settings
 # ------------------------------------------------------------
 
-API_BASE_URL <- "http://167.172.64.188:9000/JEPX_forecast"
+API_BASE_URL <- "http://167.172.64.188:9010/JEPX_forecast"
 
 # Google Sheet ID for percentile data
 PERCENTILE_SHEET_ID <- "1FVrJj-K-RXJonvvDJy6hDwK71XzpjYbOTZBPOtLi3RE"
